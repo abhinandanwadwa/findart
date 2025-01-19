@@ -16,7 +16,7 @@ ART Finder automates the collection and analysis of data from various platforms 
 
 ### User Input
 
-![User_input](src\Readme_images\User_input.png)
+![User_input](src/Readme_images/User_input.png)
 
 To begin, input your brand's title and guidelines.
 
@@ -27,7 +27,7 @@ To begin, input your brand's title and guidelines.
 
 ### Workflow Process
 
-![langflow_workflow](src\Readme_images\langflow_workflow.png)
+![langflow_workflow](src/Readme_images/langflow_workflow.png)
 
 1. *Data Input:* Enter your brand's title and guidelines into ART Finder.
 2. *Data Analysis:* ART Finder processes the input using Langflow, which sends a detailed prompt to the Perplexity API.
