@@ -16,7 +16,7 @@ ART Finder automates the collection and analysis of data from various platforms 
 
 ### User Input
 
-![User_input](findart/src/Readme_images/User_input.png)
+![User_input](findart\src\Readme_images\User_input.png)
 
 To begin, input your brand's title and guidelines.
 
