@@ -46,6 +46,7 @@ To begin, input your brand's title and guidelines.
 - [Langflow Documentation](https://docs.langflow.org/)
 - [Perplexity API Overview](https://www.perplexity.ai/)
 - [Gemini Structured Output Guide](https://ai.google.dev/gemini-api/docs/structured-output)
+- [DATASTAX Documentation](https://docs.datastax.com/en/astra-db-serverless/index.html)
 
 For more information on generating structured JSON outputs with Gemini, refer to the [Gemini Structured Output Guide](https://ai.google.dev/gemini-api/docs/structured-output).
 
