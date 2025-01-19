@@ -10,7 +10,6 @@ import CampaignPerformance from "@/components/CampaignPerformance";
 import ContentLibrary from "@/components/ContentLibrary";
 import GeographicAnalysis from "@/components/GeographicalAnalysis";
 import SwotDashboard from "@/components/SWOTAnalysis";
-import WordCloudComp from "@/components/WordCloud";
 
 const data = {
   totalReferences: 10,
@@ -176,7 +175,6 @@ export default function Dashboard() {
             <AudienceSection data={data} />
             <PerformanceMetrics data={data} />
             <SwotDashboard data={data} />
-            <WordCloudComp data={data} />
             {/* <CampaignPerformance /> */}
             <ContentLibrary />
             <GeographicAnalysis data={data} />
