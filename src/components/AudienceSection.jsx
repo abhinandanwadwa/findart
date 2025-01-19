@@ -1,4 +1,4 @@
-export default function AudienceSection() {
+export default function AudienceSection({ data }) {
   return (
     <section id="audience" className="px-6 py-8">
       <div className="mb-8">
@@ -16,36 +16,26 @@ export default function AudienceSection() {
         <div className="bg-white p-6 rounded-lg border border-neutral-200">
           <h3 className="text-lg font-semibold mb-4">Age Distribution</h3>
           <div className="space-y-3">
-            <div className="flex justify-between items-center">
-              <span>18-24</span>
-              <div className="w-2/3 bg-neutral-100 rounded-full h-2">
-                <div
-                  className="bg-blue-500 h-2 rounded-full"
-                  style={{ width: "35%" }}
-                ></div>
-              </div>
-              <span className="text-sm">35%</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span>25-34</span>
-              <div className="w-2/3 bg-neutral-100 rounded-full h-2">
-                <div
-                  className="bg-blue-500 h-2 rounded-full"
-                  style={{ width: "45%" }}
-                ></div>
-              </div>
-              <span className="text-sm">45%</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span>35-44</span>
-              <div className="w-2/3 bg-neutral-100 rounded-full h-2">
-                <div
-                  className="bg-blue-500 h-2 rounded-full"
-                  style={{ width: "20%" }}
-                ></div>
-              </div>
-              <span className="text-sm">20%</span>
-            </div>
+            {data?.ageDistribution &&
+              Object.keys(data?.ageDistribution)?.map((ageKey) => {
+                return (
+                  <div
+                    key={ageKey}
+                    className="flex justify-between items-center"
+                  >
+                    <span>{ageKey}</span>
+                    <div className="w-2/3 bg-neutral-100 rounded-full h-2">
+                      <div
+                        className="bg-blue-500 h-2 rounded-full"
+                        style={{ width: `${data?.ageDistribution[ageKey]}%` }}
+                      ></div>
+                    </div>
+                    <span className="text-sm">
+                      {data?.ageDistribution[ageKey]}%
+                    </span>
+                  </div>
+                );
+              })}
           </div>
         </div>
 
@@ -56,11 +46,15 @@ export default function AudienceSection() {
             <div className="space-y-4 w-full">
               <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
                 <span>Male</span>
-                <span className="font-semibold">58%</span>
+                <span className="font-semibold">
+                  {data?.genderDistribution?.male}%
+                </span>
               </div>
               <div className="flex justify-between items-center p-3 bg-pink-50 rounded-lg">
                 <span>Female</span>
-                <span className="font-semibold">42%</span>
+                <span className="font-semibold">
+                  {data?.genderDistribution?.female}%
+                </span>
               </div>
             </div>
           </div>
@@ -70,22 +64,15 @@ export default function AudienceSection() {
         <div className="bg-white p-6 rounded-lg border border-neutral-200">
           <h3 className="text-lg font-semibold mb-4">Top Locations</h3>
           <div className="space-y-3">
-            <div className="flex justify-between items-center p-2 bg-neutral-50 rounded">
-              <span>United States</span>
-              <span className="font-semibold">35%</span>
-            </div>
-            <div className="flex justify-between items-center p-2 bg-neutral-50 rounded">
-              <span>United Kingdom</span>
-              <span className="font-semibold">25%</span>
-            </div>
-            <div className="flex justify-between items-center p-2 bg-neutral-50 rounded">
-              <span>Canada</span>
-              <span className="font-semibold">20%</span>
-            </div>
-            <div className="flex justify-between items-center p-2 bg-neutral-50 rounded">
-              <span>Australia</span>
-              <span className="font-semibold">15%</span>
-            </div>
+            {Object?.values(data?.topLocations)?.map((location, index) => (
+              <div
+                key={index}
+                className="flex justify-between items-center p-2 bg-neutral-50 rounded"
+              >
+                <span>{location.location}</span>
+                <span className="font-semibold">{location.count}%</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
