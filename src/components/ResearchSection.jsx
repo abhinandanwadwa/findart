@@ -39,14 +39,14 @@ export default function ResearchSection({
     setData(null);
     try {
       const response = await fetch(
-        "http://127.0.0.1:7860/api/v1/run/5ca00f0f-4cf2-4fba-91dc-380a7facf584?stream=false",
+        "https://langflow.incognito.abhinandan.me/api/v1/run/3b87e5ad-9f49-4e74-8032-a6c12449728d?stream=false",
         {
           method: "POST",
           headers: {
             Authorization:
-              "Bearer sk-aroQYroPKmX7Ka9nBrTHqBvRrNvKklYmyw8BXLSoi6I",
+              "Bearer sk-lrAeJ7XDIHzBLV_kNNGMvJc6OHpmOFLfhpsZfvXh2qQ",
             "Content-Type": "application/json",
-            "x-api-key": "sk-aroQYroPKmX7Ka9nBrTHqBvRrNvKklYmyw8BXLSoi6I",
+            "x-api-key": "sk-lrAeJ7XDIHzBLV_kNNGMvJc6OHpmOFLfhpsZfvXh2qQ",
           },
           body: JSON.stringify({
             input_value: `Brand Title: ${title}. Brand Guidelines: ${guidelines}`,
