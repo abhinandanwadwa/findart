@@ -92,9 +92,9 @@ export default function ResearchSection({
   return (
     <section id="research" className="px-6 py-8">
       <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-2">Research Overview</h2>
+        <h2 className="text-2xl font-bold mb-2">Automated Research and Trigger Finder</h2>
         <p className="text-neutral-600">
-          Automated analysis and insights from multiple data sources
+          AI analysis and insights from multiple data sources for best market analysis
         </p>
       </div>
 
@@ -102,19 +102,19 @@ export default function ResearchSection({
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium mb-2">
-              Brand Topic
+              Brand Name
             </label>
             <input
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your research topic"
+              placeholder="Enter Brands Name/Core Filed/ Research Topic"
             />
           </div>
           <div>
             <label className="block text-sm font-medium mb-2">
-              Brand Guidelines
+              Brand Category and Keywords  
             </label>
             <textarea
               value={guidelines}

@@ -10,6 +10,7 @@ import CampaignPerformance from "@/components/CampaignPerformance";
 import ContentLibrary from "@/components/ContentLibrary";
 import GeographicAnalysis from "@/components/GeographicalAnalysis";
 import SwotDashboard from "@/components/SWOTAnalysis";
+import ScriptDisplay from "@/components/ScriptDisplay";
 
 const data = {
   totalReferences: 10,
@@ -107,6 +108,20 @@ const data = {
     opportunities: ["Expand to new markets", "Add more products"],
     threats: ["Competition", "Economic Recession"],
   },
+  script: {
+    title: ["Kamizz: From Desk to Dance Floor"],
+    styles: [
+      "Fast-paced, dynamic",
+      "Modern, trendy"
+    ],
+    content: [
+      "Scene 1: Office setting. A person is working diligently at their desk, wearing a Kamizz shirt.",
+      "Voiceover: \"Stuck in the 9-to-5 grind? Feeling the pressure?\"",
+      "Scene 2: Close-up of the Kamizz shirt. The fabric is highlighted, showcasing its quality and breathability.",
+      "Voiceover: \"Kamizz shirts are designed for comfort and style, no matter the occasion.\"",
+      "Scene 3: Transition to a party setting. The same person is now dancing and socializing, still wearing the same Kamizz shirt.",
+    ]
+  },
 };
 
 export default function Dashboard() {
@@ -176,6 +191,7 @@ export default function Dashboard() {
             <PerformanceMetrics data={data} />
             <SwotDashboard data={data} />
             {/* <CampaignPerformance /> */}
+            <ScriptDisplay script={data.script} />
             <ContentLibrary />
             <GeographicAnalysis data={data} />
           </div>
